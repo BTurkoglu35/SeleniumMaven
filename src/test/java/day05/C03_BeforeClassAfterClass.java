@@ -27,7 +27,8 @@ public class C03_BeforeClassAfterClass {
 
     @AfterClass
     public  static void tearDown(){
-        driver.close();
+
+        //driver.close();
     }
 
     @Test
@@ -38,6 +39,7 @@ public class C03_BeforeClassAfterClass {
     @Test
 
     public void method2(){
+
         driver.get("https://techproeducation.com");
     }
     @Test

@@ -57,7 +57,11 @@ public class C02_DropDown {
         //   1.Kategori menusunden Books seceneginisecin
         WebElement kategori= driver.findElement(By.xpath("//*[@id='searchDropdownBox']"));
         select=new Select(kategori);
-        select.selectByVisibleText("Books");
+       // select.selectByVisibleText("Books");
+        // select.selectByValue("search-alias=stripbooks-intl-ship");
+        select.selectByIndex(5);
+        System.out.println(select.getFirstSelectedOption().getText());
+
      //   2.Arama kutusuna Java yazin vearatin
         driver.findElement(By.cssSelector("input[id='twotabsearchtextbox']")).sendKeys("Java"+ Keys.ENTER);
      //   3.Bulunan sonuc sayisiniyazdirin
@@ -66,5 +70,16 @@ public class C02_DropDown {
      //   4.Sonucun Java kelimesini icerdigini testedin
         String arananKelime="Java";
         Assert.assertTrue(sonucYazisi.getText().contains(arananKelime));
+        /*
+        Dropdown menude sectigimiz option'a ulasmak istersek select.getFirstSelectedOption() methodunu kullaniriz
+         */
+
     }
+    /**
+     selectByVisibleText () / deselectByVisibleText ()   görüntülenen metne göre bir seçeneği seçer / seçimi kaldırır
+     selectByValue () / deselectByValue ()   "value" öz niteliğinin değerine göre bir seçeneği seçer / seçimi kaldırır
+     selectByIndex () / deselectByIndex ()   indeksine göre bir seçeneği seçer / seçimi kaldırır
+     isMultiple ()   açılır öğe bir seferde birden fazla seçime izin veriyorsa, DOĞRU döndürür; Aksi takdirde YANLIŞ
+     Hiçbirini seçme() önceden seçilen tüm seçeneklerin seçimini kaldırır
+     */
 }
