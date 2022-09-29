@@ -13,14 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 
 public class RadioButtonTest {
-    /*
 
--
--
-- “
-
--
-     */
 
     WebDriver driver;
 
