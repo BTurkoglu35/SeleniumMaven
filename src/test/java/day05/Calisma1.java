@@ -45,7 +45,7 @@ public class Calisma1 {
         name.sendKeys("Bt");
         Thread.sleep(3000);
         WebElement eposta = driver.findElement(By.xpath("//input[@data-qa='signup-email']"));
-        eposta.sendKeys("hayat@gmail.com");
+        eposta.sendKeys("yat@gmail.com");
         Thread.sleep(3000);
 
         //  7. 'Kaydol' düğmesini tıklayın

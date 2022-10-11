@@ -57,7 +57,7 @@ public class Soru4 extends TestBaseBeforeAfter {
 
          */
         WebElement kullaniciAdi =driver.findElement(By.xpath("(//*[@name ='email'])[1]"));
-        kullaniciAdi.sendKeys("esulukan34@gmail.com");
+        kullaniciAdi.sendKeys("asaf4@gmail.com");
         driver.findElement(By.xpath("(//*[@name ='password'])")).sendKeys("12345678");
 
     // 7. 'Giriş' düğmesini tıklayın
